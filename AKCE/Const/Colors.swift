@@ -14,5 +14,7 @@ let COLOR_SEARCH_BACK: UIColor = UIColor.init(hexString: "232B33")
 let COLOR_SEARCH_PLACEHOLDER: UIColor = UIColor.init(hexString: "777777")
 let COLOR_SEARCH_FORE: UIColor = UIColor.init(hexString: "AAAAAA")
 let COLOR_SEARCH_CANCEL: UIColor = UIColor.darkGray
+let COLOR_NAVBARTINT: UIColor = UIColor.white
+let COLOR_NAVBAR_FORE: UIColor = UIColor.white
 
 let COLOR_VIEWCONTROLLER_BACKGROUND: UIColor = UIColor.init(hexString: "131B23")

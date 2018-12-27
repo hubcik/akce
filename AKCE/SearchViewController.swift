@@ -10,6 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController, SearchDelegateProtocol {
 
+    var rightButton: UIBarButtonItem? = nil
+    
     lazy var searchTextBox:SearchTextField = {
         let stb:SearchTextField = SearchTextField.init(forAutoLayout: ())
         stb.searchDelegate = self
@@ -28,6 +30,9 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
         
         self.title = NSLocalizedString("SearchTitle", comment: "")
         
+        self.rightButton = UIBarButtonItem(image: UIImage(named: "bt-mediaType"), style: .plain, target: self, action: #selector(rightButtonTapped))
+        navigationItem.rightBarButtonItem = self.rightButton
+        
         self.view.addSubview(self.searchTextBox)
 
         self.updateViewConstraints()
@@ -44,6 +49,9 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @objc func rightButtonTapped() -> Void {
     }
     
     public func refilter(searchPhrase: String) -> () {

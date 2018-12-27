@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController:UINavigationController = UINavigationController(rootViewController: SearchViewController())
         navigationController.navigationBar.barTintColor = COLOR_MAIN
         navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.tintColor = COLOR_NAVBARTINT
+        
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNextCondensed-Medium", size: 22)!, NSAttributedString.Key.foregroundColor: COLOR_NAVBAR_FORE]
+        
         self.window?.rootViewController = navigationController
         
         return true
