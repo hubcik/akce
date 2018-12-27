@@ -8,22 +8,206 @@
 
 /* Begin PBXBuildFile section */
 		3C21BCC821D52C3400FC6223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BCC721D52C3400FC6223 /* AppDelegate.swift */; };
-		3C21BCCA21D52C3400FC6223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BCC921D52C3400FC6223 /* ViewController.swift */; };
-		3C21BCCD21D52C3400FC6223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BCCB21D52C3400FC6223 /* Main.storyboard */; };
+		3C21BCCA21D52C3400FC6223 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BCC921D52C3400FC6223 /* SearchViewController.swift */; };
 		3C21BCD021D52C3400FC6223 /* AKCE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BCCE21D52C3400FC6223 /* AKCE.xcdatamodeld */; };
 		3C21BCD221D52C3600FC6223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BCD121D52C3600FC6223 /* Assets.xcassets */; };
 		3C21BCD521D52C3600FC6223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BCD321D52C3600FC6223 /* LaunchScreen.storyboard */; };
+		B4733C3221D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */; };
+		B4733C3321D54D480084FBF9 /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */; };
+		B4733C3421D54D480084FBF9 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */; };
+		B4733C3521D54D480084FBF9 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDD21D54D480084FBF9 /* NVActivityIndicatorShape.swift */; };
+		B4733C3621D54D480084FBF9 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDE21D54D480084FBF9 /* NVActivityIndicatorView.swift */; };
+		B4733C3721D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE021D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotate.swift */; };
+		B4733C3821D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE121D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
+		B4733C3921D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE221D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
+		B4733C3A21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE321D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
+		B4733C3B21D54D480084FBF9 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE421D54D480084FBF9 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
+		B4733C3C21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE521D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
+		B4733C3D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE621D54D480084FBF9 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
+		B4733C3E21D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE721D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
+		B4733C3F21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE821D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift */; };
+		B4733C4021D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BE921D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZag.swift */; };
+		B4733C4121D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BEA21D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift */; };
+		B4733C4221D54D480084FBF9 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BEB21D54D480084FBF9 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */; };
+		B4733C4321D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BEC21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRipple.swift */; };
+		B4733C4421D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BED21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */; };
+		B4733C4521D54D480084FBF9 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BEE21D54D480084FBF9 /* NVActivityIndicatorAnimationSquareSpin.swift */; };
+		B4733C4621D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BEF21D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
+		B4733C4721D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulse.swift */; };
+		B4733C4821D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF121D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift */; };
+		B4733C4921D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF221D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
+		B4733C4A21D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF321D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */; };
+		B4733C4B21D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF421D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
+		B4733C4C21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF521D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		B4733C4D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF621D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift */; };
+		B4733C4E21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF721D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
+		B4733C4F21D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF821D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift */; };
+		B4733C5021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BF921D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift */; };
+		B4733C5121D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BFA21D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift */; };
+		B4733C5221D54D480084FBF9 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BFB21D54D480084FBF9 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		B4733C5321D54D480084FBF9 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BFC21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
+		B4733C5421D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BFD21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
+		B4733C5521D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BFE21D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
+		B4733C5621D54D480084FBF9 /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BFF21D54D480084FBF9 /* NVActivityIndicatorAnimationOrbit.swift */; };
+		B4733C5821D54D480084FBF9 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C0621D54D480084FBF9 /* NSLayoutConstraint+PureLayout.m */; };
+		B4733C5921D54D480084FBF9 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C0921D54D480084FBF9 /* ALView+PureLayout.m */; };
+		B4733C5A21D54D480084FBF9 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C0C21D54D480084FBF9 /* NSArray+PureLayout.m */; };
+		B4733C5C21D54D480084FBF9 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C1021D54D480084FBF9 /* UIProgressView+AFNetworking.m */; };
+		B4733C5D21D54D480084FBF9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C1221D54D480084FBF9 /* UIRefreshControl+AFNetworking.m */; };
+		B4733C5E21D54D480084FBF9 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C1521D54D480084FBF9 /* AFNetworkActivityIndicatorManager.m */; };
+		B4733C5F21D54D480084FBF9 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C1B21D54D480084FBF9 /* UIImageView+AFNetworking.m */; };
+		B4733C6021D54D480084FBF9 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C1E21D54D480084FBF9 /* UIButton+AFNetworking.m */; };
+		B4733C6121D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C1F21D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.m */; };
+		B4733C6221D54D480084FBF9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2021D54D480084FBF9 /* UIWebView+AFNetworking.m */; };
+		B4733C6321D54D480084FBF9 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2121D54D480084FBF9 /* AFAutoPurgingImageCache.m */; };
+		B4733C6421D54D480084FBF9 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2321D54D480084FBF9 /* AFImageDownloader.m */; };
+		B4733C6521D54D480084FBF9 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2921D54D480084FBF9 /* AFURLResponseSerialization.m */; };
+		B4733C6621D54D480084FBF9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2A21D54D480084FBF9 /* AFHTTPSessionManager.m */; };
+		B4733C6721D54D480084FBF9 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2C21D54D480084FBF9 /* AFURLSessionManager.m */; };
+		B4733C6821D54D480084FBF9 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2D21D54D480084FBF9 /* AFURLRequestSerialization.m */; };
+		B4733C6921D54D480084FBF9 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C2F21D54D480084FBF9 /* AFNetworkReachabilityManager.m */; };
+		B4733C6A21D54D480084FBF9 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C3021D54D480084FBF9 /* AFSecurityPolicy.m */; };
+		B4733C7021D5510E0084FBF9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C6F21D5510E0084FBF9 /* SearchView.swift */; };
+		B4733C7321D551820084FBF9 /* DeviceResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7221D551820084FBF9 /* DeviceResizer.swift */; };
+		B4733C7721D5533E0084FBF9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7621D5533E0084FBF9 /* Colors.swift */; };
+		B4733C9921D553930084FBF9 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7D21D553930084FBF9 /* UIColor+ChameleonPrivate.m */; };
+		B4733C9A21D553930084FBF9 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7E21D553930084FBF9 /* ChameleonConstants.m */; };
+		B4733C9B21D553930084FBF9 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8221D553930084FBF9 /* UIColor+Chameleon.m */; };
+		B4733C9C21D553930084FBF9 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8421D553930084FBF9 /* UIButton+Chameleon.m */; };
+		B4733C9D21D553930084FBF9 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8921D553930084FBF9 /* UIView+ChameleonPrivate.m */; };
+		B4733C9E21D553930084FBF9 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8A21D553930084FBF9 /* Chameleon_.m */; };
+		B4733C9F21D553930084FBF9 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8D21D553930084FBF9 /* NSArray+Chameleon.m */; };
+		B4733CA021D553930084FBF9 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8F21D553930084FBF9 /* UINavigationController+Chameleon.m */; };
+		B4733CA121D553930084FBF9 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C9021D553930084FBF9 /* UILabel+Chameleon.m */; };
+		B4733CA221D553930084FBF9 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C9121D553930084FBF9 /* UIViewController+Chameleon.m */; };
+		B4733CA321D553930084FBF9 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C9221D553930084FBF9 /* UIAppearance+Swift.m */; };
+		B4733CA421D553930084FBF9 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C9321D553930084FBF9 /* UIImage+ChameleonPrivate.m */; };
+		B4733CA921D554980084FBF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4733CA821D554980084FBF9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C21BCC421D52C3400FC6223 /* AKCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C21BCC721D52C3400FC6223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C21BCC921D52C3400FC6223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3C21BCCC21D52C3400FC6223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C21BCC921D52C3400FC6223 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3C21BCCF21D52C3400FC6223 /* AKCE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AKCE.xcdatamodel; sourceTree = "<group>"; };
 		3C21BCD121D52C3600FC6223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C21BCD421D52C3600FC6223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C21BCD621D52C3600FC6223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
+		B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
+		B4733BDD21D54D480084FBF9 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		B4733BDE21D54D480084FBF9 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B4733BE021D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
+		B4733BE121D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
+		B4733BE221D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
+		B4733BE321D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
+		B4733BE421D54D480084FBF9 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
+		B4733BE521D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
+		B4733BE621D54D480084FBF9 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
+		B4733BE721D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
+		B4733BE821D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
+		B4733BE921D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
+		B4733BEA21D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
+		B4733BEB21D54D480084FBF9 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
+		B4733BEC21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
+		B4733BED21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
+		B4733BEE21D54D480084FBF9 /* NVActivityIndicatorAnimationSquareSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationSquareSpin.swift; sourceTree = "<group>"; };
+		B4733BEF21D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		B4733BF021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
+		B4733BF121D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
+		B4733BF221D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
+		B4733BF321D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
+		B4733BF421D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
+		B4733BF521D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
+		B4733BF621D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
+		B4733BF721D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
+		B4733BF821D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
+		B4733BF921D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
+		B4733BFA21D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
+		B4733BFB21D54D480084FBF9 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		B4733BFC21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
+		B4733BFD21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
+		B4733BFE21D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
+		B4733BFF21D54D480084FBF9 /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
+		B4733C0121D54D480084FBF9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B4733C0421D54D480084FBF9 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		B4733C0521D54D480084FBF9 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		B4733C0621D54D480084FBF9 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		B4733C0721D54D480084FBF9 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		B4733C0821D54D480084FBF9 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		B4733C0921D54D480084FBF9 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		B4733C0A21D54D480084FBF9 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		B4733C0B21D54D480084FBF9 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		B4733C0C21D54D480084FBF9 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		B4733C0D21D54D480084FBF9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4733C1021D54D480084FBF9 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		B4733C1121D54D480084FBF9 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1221D54D480084FBF9 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		B4733C1321D54D480084FBF9 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1421D54D480084FBF9 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
+		B4733C1521D54D480084FBF9 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		B4733C1621D54D480084FBF9 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
+		B4733C1721D54D480084FBF9 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1821D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1921D54D480084FBF9 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1A21D54D480084FBF9 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1B21D54D480084FBF9 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		B4733C1C21D54D480084FBF9 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1D21D54D480084FBF9 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		B4733C1E21D54D480084FBF9 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		B4733C1F21D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		B4733C2021D54D480084FBF9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		B4733C2121D54D480084FBF9 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		B4733C2221D54D480084FBF9 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		B4733C2321D54D480084FBF9 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
+		B4733C2521D54D480084FBF9 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		B4733C2621D54D480084FBF9 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		B4733C2721D54D480084FBF9 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		B4733C2821D54D480084FBF9 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		B4733C2921D54D480084FBF9 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		B4733C2A21D54D480084FBF9 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		B4733C2B21D54D480084FBF9 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		B4733C2C21D54D480084FBF9 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		B4733C2D21D54D480084FBF9 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		B4733C2E21D54D480084FBF9 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		B4733C2F21D54D480084FBF9 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		B4733C3021D54D480084FBF9 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		B4733C3121D54D480084FBF9 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		B4733C6F21D5510E0084FBF9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B4733C7221D551820084FBF9 /* DeviceResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResizer.swift; sourceTree = "<group>"; };
+		B4733C7421D551B10084FBF9 /* AKCE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AKCE-Bridging-Header.h"; sourceTree = "<group>"; };
+		B4733C7621D5533E0084FBF9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B4733C7C21D553930084FBF9 /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
+		B4733C7D21D553930084FBF9 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		B4733C7E21D553930084FBF9 /* ChameleonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonConstants.m; sourceTree = "<group>"; };
+		B4733C7F21D553930084FBF9 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		B4733C8021D553930084FBF9 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		B4733C8121D553930084FBF9 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
+		B4733C8221D553930084FBF9 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		B4733C8321D553930084FBF9 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		B4733C8421D553930084FBF9 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		B4733C8521D553930084FBF9 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		B4733C8621D553930084FBF9 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		B4733C8721D553930084FBF9 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		B4733C8821D553930084FBF9 /* ChameleonEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonEnums.h; sourceTree = "<group>"; };
+		B4733C8921D553930084FBF9 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		B4733C8A21D553930084FBF9 /* Chameleon_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon_.m; sourceTree = "<group>"; };
+		B4733C8B21D553930084FBF9 /* ChameleonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonConstants.h; sourceTree = "<group>"; };
+		B4733C8C21D553930084FBF9 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		B4733C8D21D553930084FBF9 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		B4733C8E21D553930084FBF9 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		B4733C8F21D553930084FBF9 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		B4733C9021D553930084FBF9 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		B4733C9121D553930084FBF9 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		B4733C9221D553930084FBF9 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		B4733C9321D553930084FBF9 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		B4733C9421D553930084FBF9 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		B4733C9521D553930084FBF9 /* Chameleon_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon_.h; sourceTree = "<group>"; };
+		B4733C9621D553930084FBF9 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		B4733C9721D553930084FBF9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		B4733C9821D553930084FBF9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4733CA821D554980084FBF9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +240,265 @@
 		3C21BCC621D52C3400FC6223 /* AKCE */ = {
 			isa = PBXGroup;
 			children = (
+				B4733CA721D5547A0084FBF9 /* Localization */,
+				B4733C7521D553240084FBF9 /* Const */,
+				B4733C7121D551450084FBF9 /* Helpers */,
+				B4733C6E21D550DF0084FBF9 /* Views */,
+				B4733BD721D54D480084FBF9 /* Libs */,
 				3C21BCC721D52C3400FC6223 /* AppDelegate.swift */,
-				3C21BCC921D52C3400FC6223 /* ViewController.swift */,
-				3C21BCCB21D52C3400FC6223 /* Main.storyboard */,
+				3C21BCC921D52C3400FC6223 /* SearchViewController.swift */,
 				3C21BCD121D52C3600FC6223 /* Assets.xcassets */,
 				3C21BCD321D52C3600FC6223 /* LaunchScreen.storyboard */,
 				3C21BCD621D52C3600FC6223 /* Info.plist */,
 				3C21BCCE21D52C3400FC6223 /* AKCE.xcdatamodeld */,
+				B4733C7421D551B10084FBF9 /* AKCE-Bridging-Header.h */,
 			);
 			path = AKCE;
+			sourceTree = "<group>";
+		};
+		B4733BD721D54D480084FBF9 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C7821D553930084FBF9 /* ChameleonFramework */,
+				B4733BD821D54D480084FBF9 /* NVActivityIndicatorView */,
+				B4733C0021D54D480084FBF9 /* PureLayout */,
+				B4733C0E21D54D480084FBF9 /* AFNetworking */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		B4733BD821D54D480084FBF9 /* NVActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */,
+				B4733BDA21D54D480084FBF9 /* Presenter */,
+				B4733BDD21D54D480084FBF9 /* NVActivityIndicatorShape.swift */,
+				B4733BDE21D54D480084FBF9 /* NVActivityIndicatorView.swift */,
+				B4733BDF21D54D480084FBF9 /* Animations */,
+			);
+			path = NVActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		B4733BDA21D54D480084FBF9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */,
+				B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B4733BDF21D54D480084FBF9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B4733BE021D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotate.swift */,
+				B4733BE121D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridPulse.swift */,
+				B4733BE221D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotate.swift */,
+				B4733BE321D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */,
+				B4733BE421D54D480084FBF9 /* NVActivityIndicatorAnimationBallTrianglePath.swift */,
+				B4733BE521D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */,
+				B4733BE621D54D480084FBF9 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */,
+				B4733BE721D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */,
+				B4733BE821D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift */,
+				B4733BE921D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZag.swift */,
+				B4733BEA21D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift */,
+				B4733BEB21D54D480084FBF9 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */,
+				B4733BEC21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRipple.swift */,
+				B4733BED21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */,
+				B4733BEE21D54D480084FBF9 /* NVActivityIndicatorAnimationSquareSpin.swift */,
+				B4733BEF21D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotateChase.swift */,
+				B4733BF021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulse.swift */,
+				B4733BF121D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift */,
+				B4733BF221D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift */,
+				B4733BF321D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */,
+				B4733BF421D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift */,
+				B4733BF521D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */,
+				B4733BF621D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift */,
+				B4733BF721D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */,
+				B4733BF821D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift */,
+				B4733BF921D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift */,
+				B4733BFA21D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift */,
+				B4733BFB21D54D480084FBF9 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */,
+				B4733BFC21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScaleParty.swift */,
+				B4733BFD21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */,
+				B4733BFE21D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseRise.swift */,
+				B4733BFF21D54D480084FBF9 /* NVActivityIndicatorAnimationOrbit.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		B4733C0021D54D480084FBF9 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C0121D54D480084FBF9 /* LICENSE */,
+				B4733C0221D54D480084FBF9 /* PureLayout */,
+				B4733C0D21D54D480084FBF9 /* README.md */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		B4733C0221D54D480084FBF9 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C0321D54D480084FBF9 /* PureLayout */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		B4733C0321D54D480084FBF9 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C0421D54D480084FBF9 /* PureLayoutDefines.h */,
+				B4733C0521D54D480084FBF9 /* ALView+PureLayout.h */,
+				B4733C0621D54D480084FBF9 /* NSLayoutConstraint+PureLayout.m */,
+				B4733C0721D54D480084FBF9 /* NSArray+PureLayout.h */,
+				B4733C0821D54D480084FBF9 /* NSLayoutConstraint+PureLayout.h */,
+				B4733C0921D54D480084FBF9 /* ALView+PureLayout.m */,
+				B4733C0A21D54D480084FBF9 /* PureLayout+Internal.h */,
+				B4733C0B21D54D480084FBF9 /* PureLayout.h */,
+				B4733C0C21D54D480084FBF9 /* NSArray+PureLayout.m */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		B4733C0E21D54D480084FBF9 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C0F21D54D480084FBF9 /* UIKit+AFNetworking */,
+				B4733C2421D54D480084FBF9 /* AFNetworking */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B4733C0F21D54D480084FBF9 /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C1021D54D480084FBF9 /* UIProgressView+AFNetworking.m */,
+				B4733C1121D54D480084FBF9 /* UIButton+AFNetworking.h */,
+				B4733C1221D54D480084FBF9 /* UIRefreshControl+AFNetworking.m */,
+				B4733C1321D54D480084FBF9 /* UIImageView+AFNetworking.h */,
+				B4733C1421D54D480084FBF9 /* AFImageDownloader.h */,
+				B4733C1521D54D480084FBF9 /* AFNetworkActivityIndicatorManager.m */,
+				B4733C1621D54D480084FBF9 /* AFAutoPurgingImageCache.h */,
+				B4733C1721D54D480084FBF9 /* UIWebView+AFNetworking.h */,
+				B4733C1821D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.h */,
+				B4733C1921D54D480084FBF9 /* UIImage+AFNetworking.h */,
+				B4733C1A21D54D480084FBF9 /* UIProgressView+AFNetworking.h */,
+				B4733C1B21D54D480084FBF9 /* UIImageView+AFNetworking.m */,
+				B4733C1C21D54D480084FBF9 /* UIKit+AFNetworking.h */,
+				B4733C1D21D54D480084FBF9 /* UIRefreshControl+AFNetworking.h */,
+				B4733C1E21D54D480084FBF9 /* UIButton+AFNetworking.m */,
+				B4733C1F21D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.m */,
+				B4733C2021D54D480084FBF9 /* UIWebView+AFNetworking.m */,
+				B4733C2121D54D480084FBF9 /* AFAutoPurgingImageCache.m */,
+				B4733C2221D54D480084FBF9 /* AFNetworkActivityIndicatorManager.h */,
+				B4733C2321D54D480084FBF9 /* AFImageDownloader.m */,
+			);
+			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		B4733C2421D54D480084FBF9 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C2521D54D480084FBF9 /* AFSecurityPolicy.h */,
+				B4733C2621D54D480084FBF9 /* AFNetworkReachabilityManager.h */,
+				B4733C2721D54D480084FBF9 /* AFURLSessionManager.h */,
+				B4733C2821D54D480084FBF9 /* AFURLRequestSerialization.h */,
+				B4733C2921D54D480084FBF9 /* AFURLResponseSerialization.m */,
+				B4733C2A21D54D480084FBF9 /* AFHTTPSessionManager.m */,
+				B4733C2B21D54D480084FBF9 /* AFURLResponseSerialization.h */,
+				B4733C2C21D54D480084FBF9 /* AFURLSessionManager.m */,
+				B4733C2D21D54D480084FBF9 /* AFURLRequestSerialization.m */,
+				B4733C2E21D54D480084FBF9 /* AFNetworking.h */,
+				B4733C2F21D54D480084FBF9 /* AFNetworkReachabilityManager.m */,
+				B4733C3021D54D480084FBF9 /* AFSecurityPolicy.m */,
+				B4733C3121D54D480084FBF9 /* AFHTTPSessionManager.h */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B4733C6E21D550DF0084FBF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C6F21D5510E0084FBF9 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4733C7121D551450084FBF9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C7221D551820084FBF9 /* DeviceResizer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B4733C7521D553240084FBF9 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C7621D5533E0084FBF9 /* Colors.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		B4733C7821D553930084FBF9 /* ChameleonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C7A21D553930084FBF9 /* Classes */,
+				B4733C9721D553930084FBF9 /* LICENSE.md */,
+				B4733C9821D553930084FBF9 /* README.md */,
+			);
+			path = ChameleonFramework;
+			sourceTree = "<group>";
+		};
+		B4733C7A21D553930084FBF9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C7B21D553930084FBF9 /* Objective-C */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B4733C7B21D553930084FBF9 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				B4733C7C21D553930084FBF9 /* ChameleonMacros.h */,
+				B4733C7D21D553930084FBF9 /* UIColor+ChameleonPrivate.m */,
+				B4733C7E21D553930084FBF9 /* ChameleonConstants.m */,
+				B4733C7F21D553930084FBF9 /* UILabel+Chameleon.h */,
+				B4733C8021D553930084FBF9 /* UINavigationController+Chameleon.h */,
+				B4733C8121D553930084FBF9 /* Chameleon.h */,
+				B4733C8221D553930084FBF9 /* UIColor+Chameleon.m */,
+				B4733C8321D553930084FBF9 /* NSArray+Chameleon.h */,
+				B4733C8421D553930084FBF9 /* UIButton+Chameleon.m */,
+				B4733C8521D553930084FBF9 /* UIImage+ChameleonPrivate.h */,
+				B4733C8621D553930084FBF9 /* UIAppearance+Swift.h */,
+				B4733C8721D553930084FBF9 /* UIViewController+Chameleon.h */,
+				B4733C8821D553930084FBF9 /* ChameleonEnums.h */,
+				B4733C8921D553930084FBF9 /* UIView+ChameleonPrivate.m */,
+				B4733C8A21D553930084FBF9 /* Chameleon_.m */,
+				B4733C8B21D553930084FBF9 /* ChameleonConstants.h */,
+				B4733C8C21D553930084FBF9 /* UIColor+ChameleonPrivate.h */,
+				B4733C8D21D553930084FBF9 /* NSArray+Chameleon.m */,
+				B4733C8E21D553930084FBF9 /* UIColor+Chameleon.h */,
+				B4733C8F21D553930084FBF9 /* UINavigationController+Chameleon.m */,
+				B4733C9021D553930084FBF9 /* UILabel+Chameleon.m */,
+				B4733C9121D553930084FBF9 /* UIViewController+Chameleon.m */,
+				B4733C9221D553930084FBF9 /* UIAppearance+Swift.m */,
+				B4733C9321D553930084FBF9 /* UIImage+ChameleonPrivate.m */,
+				B4733C9421D553930084FBF9 /* UIButton+Chameleon.h */,
+				B4733C9521D553930084FBF9 /* Chameleon_.h */,
+				B4733C9621D553930084FBF9 /* UIView+ChameleonPrivate.h */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
+		B4733CA721D5547A0084FBF9 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B4733CA821D554980084FBF9 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +561,7 @@
 			files = (
 				3C21BCD521D52C3600FC6223 /* LaunchScreen.storyboard in Resources */,
 				3C21BCD221D52C3600FC6223 /* Assets.xcassets in Resources */,
-				3C21BCCD21D52C3400FC6223 /* Main.storyboard in Resources */,
+				B4733CA921D554980084FBF9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +572,85 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C21BCCA21D52C3400FC6223 /* ViewController.swift in Sources */,
+				B4733C5621D54D480084FBF9 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
+				B4733C3821D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				B4733C9B21D553930084FBF9 /* UIColor+Chameleon.m in Sources */,
+				B4733C4721D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
+				B4733C6421D54D480084FBF9 /* AFImageDownloader.m in Sources */,
+				B4733C5A21D54D480084FBF9 /* NSArray+PureLayout.m in Sources */,
+				3C21BCCA21D52C3400FC6223 /* SearchViewController.swift in Sources */,
+				B4733C3621D54D480084FBF9 /* NVActivityIndicatorView.swift in Sources */,
+				B4733C3A21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
+				B4733C5121D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				B4733C5F21D54D480084FBF9 /* UIImageView+AFNetworking.m in Sources */,
 				3C21BCC821D52C3400FC6223 /* AppDelegate.swift in Sources */,
+				B4733C3D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				B4733C4C21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				B4733C4021D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
+				B4733C5E21D54D480084FBF9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				B4733C9E21D553930084FBF9 /* Chameleon_.m in Sources */,
+				B4733C6721D54D480084FBF9 /* AFURLSessionManager.m in Sources */,
+				B4733C5821D54D480084FBF9 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				B4733C4221D54D480084FBF9 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				B4733C4321D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				B4733C3221D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				B4733C5221D54D480084FBF9 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				B4733C4521D54D480084FBF9 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				B4733C9D21D553930084FBF9 /* UIView+ChameleonPrivate.m in Sources */,
+				B4733C6621D54D480084FBF9 /* AFHTTPSessionManager.m in Sources */,
+				B4733C3B21D54D480084FBF9 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
+				B4733C6521D54D480084FBF9 /* AFURLResponseSerialization.m in Sources */,
+				B4733C3921D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				B4733C6221D54D480084FBF9 /* UIWebView+AFNetworking.m in Sources */,
+				B4733C4D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				B4733C5421D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				B4733C4921D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				B4733C3F21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				B4733C5C21D54D480084FBF9 /* UIProgressView+AFNetworking.m in Sources */,
+				B4733CA121D553930084FBF9 /* UILabel+Chameleon.m in Sources */,
+				B4733C9921D553930084FBF9 /* UIColor+ChameleonPrivate.m in Sources */,
+				B4733C3721D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
+				B4733C3E21D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				B4733C5521D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				B4733C7021D5510E0084FBF9 /* SearchView.swift in Sources */,
+				B4733C4621D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				B4733C9F21D553930084FBF9 /* NSArray+Chameleon.m in Sources */,
+				B4733C5321D54D480084FBF9 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				B4733C7321D551820084FBF9 /* DeviceResizer.swift in Sources */,
 				3C21BCD021D52C3400FC6223 /* AKCE.xcdatamodeld in Sources */,
+				B4733C4B21D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				B4733C5D21D54D480084FBF9 /* UIRefreshControl+AFNetworking.m in Sources */,
+				B4733C7721D5533E0084FBF9 /* Colors.swift in Sources */,
+				B4733C6321D54D480084FBF9 /* AFAutoPurgingImageCache.m in Sources */,
+				B4733C5021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				B4733C5921D54D480084FBF9 /* ALView+PureLayout.m in Sources */,
+				B4733CA021D553930084FBF9 /* UINavigationController+Chameleon.m in Sources */,
+				B4733CA321D553930084FBF9 /* UIAppearance+Swift.m in Sources */,
+				B4733C6921D54D480084FBF9 /* AFNetworkReachabilityManager.m in Sources */,
+				B4733C9C21D553930084FBF9 /* UIButton+Chameleon.m in Sources */,
+				B4733C9A21D553930084FBF9 /* ChameleonConstants.m in Sources */,
+				B4733C3321D54D480084FBF9 /* NVActivityIndicatorPresenter.swift in Sources */,
+				B4733C6021D54D480084FBF9 /* UIButton+AFNetworking.m in Sources */,
+				B4733C4821D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				B4733C4121D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				B4733CA221D553930084FBF9 /* UIViewController+Chameleon.m in Sources */,
+				B4733C6821D54D480084FBF9 /* AFURLRequestSerialization.m in Sources */,
+				B4733C4F21D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				B4733C6A21D54D480084FBF9 /* AFSecurityPolicy.m in Sources */,
+				B4733C3C21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				B4733C4421D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				B4733C4A21D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
+				B4733C4E21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				B4733C3421D54D480084FBF9 /* NVActivityIndicatorViewable.swift in Sources */,
+				B4733C3521D54D480084FBF9 /* NVActivityIndicatorShape.swift in Sources */,
+				B4733CA421D553930084FBF9 /* UIImage+ChameleonPrivate.m in Sources */,
+				B4733C6121D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3C21BCCB21D52C3400FC6223 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C21BCCC21D52C3400FC6223 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3C21BCD321D52C3600FC6223 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hgs.AKCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AKCE/AKCE-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,6 +810,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hgs.AKCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AKCE/AKCE-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
