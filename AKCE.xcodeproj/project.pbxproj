@@ -12,6 +12,9 @@
 		3C21BCD021D52C3400FC6223 /* AKCE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BCCE21D52C3400FC6223 /* AKCE.xcdatamodeld */; };
 		3C21BCD221D52C3600FC6223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BCD121D52C3600FC6223 /* Assets.xcassets */; };
 		3C21BCD521D52C3600FC6223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BCD321D52C3600FC6223 /* LaunchScreen.storyboard */; };
+		3C6F3DAD21D62962007AEA34 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F3DAC21D62962007AEA34 /* APIClient.swift */; };
+		3C6F3DB021D6419A007AEA34 /* ItemsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F3DAF21D6419A007AEA34 /* ItemsCollectionView.swift */; };
+		3C6F3DB221D64277007AEA34 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F3DB121D64277007AEA34 /* ItemCollectionViewCell.swift */; };
 		B4733C3221D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */; };
 		B4733C3321D54D480084FBF9 /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */; };
 		B4733C3421D54D480084FBF9 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */; };
@@ -93,6 +96,9 @@
 		3C21BCD121D52C3600FC6223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C21BCD421D52C3600FC6223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C21BCD621D52C3600FC6223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6F3DAC21D62962007AEA34 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		3C6F3DAF21D6419A007AEA34 /* ItemsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionView.swift; sourceTree = "<group>"; };
+		3C6F3DB121D64277007AEA34 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
 		B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 		3C21BCC621D52C3400FC6223 /* AKCE */ = {
 			isa = PBXGroup;
 			children = (
+				3C6F3DAB21D62947007AEA34 /* Networking */,
 				B4733CA721D5547A0084FBF9 /* Localization */,
 				B4733C7521D553240084FBF9 /* Const */,
 				B4733C7121D551450084FBF9 /* Helpers */,
@@ -254,6 +261,23 @@
 				B4733C7421D551B10084FBF9 /* AKCE-Bridging-Header.h */,
 			);
 			path = AKCE;
+			sourceTree = "<group>";
+		};
+		3C6F3DAB21D62947007AEA34 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F3DAC21D62962007AEA34 /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3C6F3DAE21D63E7B007AEA34 /* ItemsCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3C6F3DAF21D6419A007AEA34 /* ItemsCollectionView.swift */,
+				3C6F3DB121D64277007AEA34 /* ItemCollectionViewCell.swift */,
+			);
+			path = ItemsCollectionView;
 			sourceTree = "<group>";
 		};
 		B4733BD721D54D480084FBF9 /* Libs */ = {
@@ -420,6 +444,7 @@
 		B4733C6E21D550DF0084FBF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C6F3DAE21D63E7B007AEA34 /* ItemsCollectionView */,
 				B4733C6F21D5510E0084FBF9 /* SearchView.swift */,
 			);
 			path = Views;
@@ -621,6 +646,7 @@
 				B4733C4B21D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				B4733C5D21D54D480084FBF9 /* UIRefreshControl+AFNetworking.m in Sources */,
 				B4733C7721D5533E0084FBF9 /* Colors.swift in Sources */,
+				3C6F3DB221D64277007AEA34 /* ItemCollectionViewCell.swift in Sources */,
 				B4733C6321D54D480084FBF9 /* AFAutoPurgingImageCache.m in Sources */,
 				B4733C5021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				B4733C5921D54D480084FBF9 /* ALView+PureLayout.m in Sources */,
@@ -637,7 +663,9 @@
 				B4733C6821D54D480084FBF9 /* AFURLRequestSerialization.m in Sources */,
 				B4733C4F21D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				B4733C6A21D54D480084FBF9 /* AFSecurityPolicy.m in Sources */,
+				3C6F3DAD21D62962007AEA34 /* APIClient.swift in Sources */,
 				B4733C3C21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				3C6F3DB021D6419A007AEA34 /* ItemsCollectionView.swift in Sources */,
 				B4733C4421D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B4733C4A21D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				B4733C4E21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,

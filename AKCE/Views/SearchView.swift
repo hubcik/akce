@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SearchDelegateProtocol {
+protocol SearchDelegateProtocol: class {
     func refilter(searchPhrase: String)
 }
 
@@ -16,7 +16,7 @@ let CSEARCH_BAR_HEIGHT: CGFloat = dr.r(v: 40)
 
 class SearchTextField: UIView, UITextFieldDelegate {
     
-    var searchDelegate: SearchDelegateProtocol?
+    weak var searchDelegate: SearchDelegateProtocol?
     
     lazy var textField: UITextField = {
         let tf: UITextField = UITextField(forAutoLayout:())
