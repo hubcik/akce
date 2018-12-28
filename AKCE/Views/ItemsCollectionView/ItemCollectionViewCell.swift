@@ -22,6 +22,16 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return b
     }()
 
+    public var imageView: UIImageView = {
+        let iv: UIImageView = UIImageView(frame: CGRect.zero)
+        
+        iv.backgroundColor = UIColor.black
+        iv.contentMode = UIView.ContentMode.scaleAspectFill
+        iv.clipsToBounds = true
+        
+        return iv
+    }()
+
 //    lazy var menuOptionLabel: UILabel = {
 //        var tmpLabel:UILabel = UILabel(forAutoLayout:())
 //        tmpLabel.backgroundColor = UIColor.clear
@@ -51,7 +61,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
         self.contentView.clipsToBounds = true
         
         self.contentView.addSubview(self.backgroundViewWithColor)
-        
+        self.contentView.addSubview(self.imageView)
+
         self.updateConstraints()
         
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -63,19 +74,19 @@ class ItemCollectionViewCell: UICollectionViewCell {
         
         super.updateConstraints()
 
-        self.backgroundViewWithColor.autoPinEdge(ALEdge.left, to: ALEdge.left, of: self.contentView, withOffset: dr.r(v: 5))
-        self.backgroundViewWithColor.autoPinEdge(ALEdge.right, to: ALEdge.right, of: self.contentView, withOffset: dr.r(v: -5))
-        self.backgroundViewWithColor.autoPinEdge(ALEdge.top, to: ALEdge.top, of: self.contentView, withOffset: dr.r(v: 5))
-        self.backgroundViewWithColor.autoPinEdge(ALEdge.bottom, to: ALEdge.bottom, of: self.contentView, withOffset: dr.r(v: -5))
+        self.backgroundViewWithColor.autoPinEdge(.left, to: .left, of: self.contentView, withOffset: dr.r(v: 5))
+        self.backgroundViewWithColor.autoPinEdge(.right, to: .right, of: self.contentView, withOffset: dr.r(v: -5))
+        self.backgroundViewWithColor.autoPinEdge(.top, to: .top, of: self.contentView, withOffset: dr.r(v: 5))
+        self.backgroundViewWithColor.autoPinEdge(.bottom, to: .bottom, of: self.contentView, withOffset: dr.r(v: -5))
 
-//        self.menuOptionImage.autoSetDimensions(to: CGSize.init(width: Dr.r(v: 55), height: Dr.r(v: 55)))
-//        self.menuOptionImage.autoAlignAxis(.vertical, toSameAxisOf: self.backgroundViewWithColor)
-//        self.menuOptionImage.autoPinEdge(ALEdge.top, to: ALEdge.top, of: self.backgroundViewWithColor, withOffset: Dr.r(v: 32) + iphoneXShift)
-//
-//        self.menuOptionLabel.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: Dr.r(v: 10))
-//        self.menuOptionLabel.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: Dr.r(v: 105) + iphoneXShift)
-//        self.menuOptionLabel.autoPinEdge(.right, to: .right, of: self.backgroundViewWithColor, withOffset: Dr.r(v: -10))
-//        self.menuOptionLabel.autoSetDimension(.height, toSize: Dr.r(v: 26))
+        self.backgroundViewWithColor.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: dr.r(v: 5))
+        self.backgroundViewWithColor.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: dr.r(v: 5))
+        self.backgroundViewWithColor.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: dr.r(v: -5))
+        self.backgroundViewWithColor.autoMatch(.width, to: .height, of: self.backgroundViewWithColor)
+    }
+
+    public func setItem(_ item: ITunesItem) {
+        self.imageView.loadImageAsync(with: item.imageURL)
     }
 
     class func reuseIdentifier() -> String

@@ -11,6 +11,7 @@ import UIKit
 class SearchViewController: UIViewController, SearchDelegateProtocol {
 
     var rightButton: UIBarButtonItem? = nil
+    var itemsArray: [ITunesItem] = []
     
     lazy var searchTextBox:SearchTextField = {
         let stb: SearchTextField = SearchTextField.init(forAutoLayout: ())
@@ -65,7 +66,23 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
         
         let api: APIClient = APIClient(baseURL: URL.init(string: "https://itunes.apple.com")!)
         
-        api.getItems(path: "search?country=US&media=music&term=madonna&limit=100", parameters: nil) { (code: NSInteger, result: Any, message: String) in
+        api.getItems(path: "search?country=US&media=music&term=madonna&limit=100", parameters: nil) { (code: NSInteger, result: Any?, message: String) in
+            
+            DispatchQueue.main.async() {
+                self.itemsArray.removeAll()
+                
+                if (result != nil) {
+                    let resultAsDict = result as! [String : Any]
+                    
+                    for case let itemDict as [String : Any] in (resultAsDict["results"] as! [Any]) {
+                        let itemObj = ITunesItem.init(itemDictionary: itemDict)
+                        self.itemsArray.append(itemObj)
+                    }
+                }
+
+//                self.table.reloadData()
+            }
+            
             print(result)
         }
     }
