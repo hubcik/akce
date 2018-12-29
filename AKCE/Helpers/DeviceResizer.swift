@@ -18,7 +18,7 @@ class dr: NSObject {
         
         if (resizeFactor < 0)
         {
-            resizeFactor = UIScreen.main.bounds.size.width / cDesignScreenWidth
+            resizeFactor = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height) / cDesignScreenWidth
         }
         
         return ceil(resizeFactor * v)

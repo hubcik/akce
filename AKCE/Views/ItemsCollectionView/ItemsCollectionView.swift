@@ -10,7 +10,7 @@ import UIKit
 
 class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    var itemsArray: NSArray?
+    var itemsArray: [ITunesItem]?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,6 +23,8 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
         flowLayout.minimumInteritemSpacing = 0.0
         flowLayout.sectionInset = UIEdgeInsets.zero
         flowLayout.scrollDirection = .vertical
+        
+        flowLayout.sectionInset = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
 
         super.init(frame: frame, collectionViewLayout: flowLayout)
 
@@ -32,7 +34,6 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
         self.delegate = self
     
         self.bounces = true
-        self.showsVerticalScrollIndicator = false
     
         self.backgroundColor = UIColor.clear
     }
@@ -52,20 +53,23 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ItemCollectionViewCell = self.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.reuseIdentifier(), for: indexPath) as! ItemCollectionViewCell
+
+        cell.setItem(self.itemsArray![indexPath.row])
         
-        return cell;
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if UIDevice.current.orientation.isPortrait {
-            return CGSize(width: UIScreen.main.bounds.size.width - 20, height: 100)
+        //TODO: Flat should not change the size
+        if UIDevice.current.orientation.isPortrait || UIDevice.current.orientation.isFlat {
+            return CGSize(width: UIScreen.main.bounds.size.width, height: 100)
         }
         else {
             //Landscape
-            return CGSize(width: UIScreen.main.bounds.size.width / 3 - 20, height: 100)
+            return CGSize(width: (UIScreen.main.bounds.size.width - 2) / 2, height: 100)
         }
     }
 }

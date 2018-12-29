@@ -29,6 +29,7 @@ extension UIImageView {
         oldTask?.cancel()
 
         self.image = nil
+        self.alpha = 0
 
         guard let urlString = urlString else { return }
 
@@ -36,7 +37,6 @@ extension UIImageView {
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
         config.urlCache = nil
 
-        // download
         let url = URL(string: urlString)!
         currentURL = url
         let task = URLSession.init(configuration: config).dataTask(with: url) { [weak self] data, response, error in
@@ -58,6 +58,9 @@ extension UIImageView {
             if url == self?.currentURL {
                 DispatchQueue.main.async {
                     self?.image = downloadedImage
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self?.alpha = 1
+                    })
                 }
             }
         }

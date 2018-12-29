@@ -64,27 +64,7 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let api: APIClient = APIClient(baseURL: URL.init(string: "https://itunes.apple.com")!)
-        
-        api.getItems(path: "search?country=US&media=music&term=madonna&limit=100", parameters: nil) { (code: NSInteger, result: Any?, message: String) in
-            
-            DispatchQueue.main.async() {
-                self.itemsArray.removeAll()
-                
-                if (result != nil) {
-                    let resultAsDict = result as! [String : Any]
-                    
-                    for case let itemDict as [String : Any] in (resultAsDict["results"] as! [Any]) {
-                        let itemObj = ITunesItem.init(itemDictionary: itemDict)
-                        self.itemsArray.append(itemObj)
-                    }
-                }
-
-//                self.table.reloadData()
-            }
-            
-            print(result)
-        }
+        self.refilter(searchPhrase: "")
     }
     
     override func viewWillLayoutSubviews() {
@@ -119,6 +99,28 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
     }
     
     public func refilter(searchPhrase: String) -> () {
+        let api: APIClient = APIClient(baseURL: URL.init(string: "https://itunes.apple.com")!)
+        
+        api.getItems(path: "search?country=US&media=music&term=madonna&limit=100", parameters: nil) { (code: NSInteger, result: Any?, message: String) in
+            
+            DispatchQueue.main.async() {
+                self.itemsArray.removeAll()
+                
+                if (result != nil) {
+                    let resultAsDict = result as! [String : Any]
+                    
+                    for case let itemDict as [String : Any] in (resultAsDict["results"] as! [Any]) {
+                        let itemObj = ITunesItem.init(itemDictionary: itemDict)
+                        self.itemsArray.append(itemObj)
+                    }
+                }
+                
+                self.itemsCollectionView.itemsArray = self.itemsArray
+                self.itemsCollectionView.reloadData()
+            }
+            
+            print(result)
+        }
     }
 }
 

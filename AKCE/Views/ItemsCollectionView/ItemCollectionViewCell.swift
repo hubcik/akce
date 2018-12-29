@@ -10,13 +10,16 @@ import UIKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
     
+    var constraintsSet: Bool = false
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
     }
 
     lazy var backgroundViewWithColor:UIView = {
         let b:UIView = UIView(forAutoLayout:())
-        b.backgroundColor = UIColor.green
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.backgroundColor = COLOR_ITEM_BACK
         b.clipsToBounds = true
         
         return b
@@ -25,33 +28,27 @@ class ItemCollectionViewCell: UICollectionViewCell {
     public var imageView: UIImageView = {
         let iv: UIImageView = UIImageView(frame: CGRect.zero)
         
-        iv.backgroundColor = UIColor.black
+        iv.backgroundColor = UIColor.clear
         iv.contentMode = UIView.ContentMode.scaleAspectFill
         iv.clipsToBounds = true
         
         return iv
     }()
 
-//    lazy var menuOptionLabel: UILabel = {
-//        var tmpLabel:UILabel = UILabel(forAutoLayout:())
-//        tmpLabel.backgroundColor = UIColor.clear
-//        tmpLabel.font = UIFont(name: "SofiaPro-Medium", size: dr.r(v: 19))
-//        tmpLabel.numberOfLines = 1
-//        tmpLabel.textAlignment = NSTextAlignment.center
-//        tmpLabel.adjustsFontSizeToFitWidth = true;
-//        tmpLabel.minimumScaleFactor = 0.3
-//
-//        tmpLabel.text = ""
-//
-//        return tmpLabel;
-//    }();
+    lazy var nameLabel: UILabel = {
+        var l: UILabel = UILabel(forAutoLayout:())
+        l.backgroundColor = UIColor.clear
+        l.textColor = COLOR_ITEM_NAME
+        l.font = UIFont.systemFont(ofSize: 14)
+        l.numberOfLines = 5
+        l.textAlignment = NSTextAlignment.left
+        l.adjustsFontSizeToFitWidth = true;
+        l.minimumScaleFactor = 0.3
 
-//    lazy var menuOptionImage: UIImageView = {
-//        let iv: UIImageView = UIImageView.init(forAutoLayout: ())
-//        iv.contentMode = .scaleAspectFit
-//
-//        return iv
-//    }()
+        l.text = ""
+
+        return l
+    }()
 
     public override init(frame: CGRect) {
 
@@ -62,11 +59,12 @@ class ItemCollectionViewCell: UICollectionViewCell {
         
         self.contentView.addSubview(self.backgroundViewWithColor)
         self.contentView.addSubview(self.imageView)
+        self.contentView.addSubview(self.nameLabel)
 
         self.updateConstraints()
         
         self.translatesAutoresizingMaskIntoConstraints = false
-        
+                
         updateConstraints()
     }
 
@@ -74,19 +72,31 @@ class ItemCollectionViewCell: UICollectionViewCell {
         
         super.updateConstraints()
 
-        self.backgroundViewWithColor.autoPinEdge(.left, to: .left, of: self.contentView, withOffset: dr.r(v: 5))
-        self.backgroundViewWithColor.autoPinEdge(.right, to: .right, of: self.contentView, withOffset: dr.r(v: -5))
-        self.backgroundViewWithColor.autoPinEdge(.top, to: .top, of: self.contentView, withOffset: dr.r(v: 5))
-        self.backgroundViewWithColor.autoPinEdge(.bottom, to: .bottom, of: self.contentView, withOffset: dr.r(v: -5))
+        if (constraintsSet) {
+            return
+        }
+        
+        self.backgroundViewWithColor.autoPinEdge(.left, to: .left, of: self.contentView, withOffset: dr.r(v: 0))
+        self.backgroundViewWithColor.autoPinEdge(.right, to: .right, of: self.contentView, withOffset: dr.r(v: 0))
+        self.backgroundViewWithColor.autoPinEdge(.top, to: .top, of: self.contentView, withOffset: dr.r(v: 1))
+        self.backgroundViewWithColor.autoPinEdge(.bottom, to: .bottom, of: self.contentView, withOffset: dr.r(v: -1))
 
-        self.backgroundViewWithColor.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: dr.r(v: 5))
-        self.backgroundViewWithColor.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: dr.r(v: 5))
-        self.backgroundViewWithColor.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: dr.r(v: -5))
-        self.backgroundViewWithColor.autoMatch(.width, to: .height, of: self.backgroundViewWithColor)
+        self.imageView.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: dr.r(v: 15))
+        self.imageView.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: dr.r(v: 15))
+        self.imageView.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: dr.r(v: -15))
+        self.imageView.autoMatch(.width, to: .height, of: self.imageView)
+
+        self.nameLabel.autoPinEdge(.left, to: .right, of: self.imageView, withOffset: dr.r(v: 10))
+        self.nameLabel.autoPinEdge(.right, to: .right, of: self.backgroundViewWithColor, withOffset: dr.r(v: -5))
+        self.nameLabel.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: dr.r(v: 5))
+        self.nameLabel.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: dr.r(v: -5))
+        
+        constraintsSet = true
     }
 
     public func setItem(_ item: ITunesItem) {
         self.imageView.loadImageAsync(with: item.imageURL)
+        self.nameLabel.text = item.name
     }
 
     class func reuseIdentifier() -> String
