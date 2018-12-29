@@ -20,4 +20,5 @@ let COLOR_NAVBAR_FORE: UIColor = UIColor.white
 let COLOR_VIEWCONTROLLER_BACKGROUND: UIColor = UIColor.init(hexString: "131B23")
 
 let COLOR_ITEM_BACK: UIColor = UIColor.init(hexString: "111111")
-let COLOR_ITEM_NAME: UIColor = UIColor.init(hexString: "AAAAAA")
+let COLOR_ITEM_BACK_VISTED: UIColor = UIColor.init(hexString: "555555")
+let COLOR_ITEM_NAME: UIColor = UIColor.init(hexString: "CCCCCC")

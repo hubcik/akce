@@ -29,10 +29,19 @@ extension UIImageView {
         oldTask?.cancel()
 
         self.image = nil
-        self.alpha = 0
 
         guard let urlString = urlString else { return }
 
+        let img: UIImage? = (UIApplication.shared.delegate as! AppDelegate).imageCache.object(forKey: urlString as NSString)
+        
+        if img != nil {
+            self.image = img
+            self.alpha = 1
+            return
+        }
+
+        self.alpha = 0
+        
         let config = URLSessionConfiguration.default
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
         config.urlCache = nil
@@ -57,6 +66,7 @@ extension UIImageView {
 
             if url == self?.currentURL {
                 DispatchQueue.main.async {
+                    (UIApplication.shared.delegate as! AppDelegate).imageCache.setObject(downloadedImage, forKey: url.absoluteString as NSString)
                     self?.image = downloadedImage
                     UIView.animate(withDuration: 0.3, animations: {
                         self?.alpha = 1

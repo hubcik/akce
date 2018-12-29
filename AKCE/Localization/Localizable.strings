@@ -6,6 +6,18 @@
   Copyright © 2018 Hubert Gostomski. All rights reserved.
 */
 
+"MessageTitle" = "iTunes Browser";
 "Search" = "Search";
-"SearchTitle" = "AKCE";
+"SearchTitle" = "iTunes Browser";
 "SelectMediaType" = "Select Media Type";
+"ItemDetailsTitle" = "Details";
+"ConfirmDeleteItem" = "Do you want to remove this item from you search results?";
+
+"Yes" = "Yes";
+"No" = "No";
+
+"MediaType_All" = "All";
+"MediaType_Movie" = "Movie";
+"MediaType_Music" = "Music";
+"MediaType_Podcast" = "Podcast";
+

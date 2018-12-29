@@ -8,10 +8,20 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, SearchDelegateProtocol {
+enum MediaType {
+    case All
+    case Movie
+    case Music
+    case Podcast
+}
 
-    var rightButton: UIBarButtonItem? = nil
-    var itemsArray: [ITunesItem] = []
+class SearchViewController: UIViewController, SearchDelegateProtocol, UICollectionViewDelegate, ShowItemDelegateProtocol {
+
+    private var rightButton: UIBarButtonItem?
+    private var itemsArray: [ITunesItem] = []
+    private var shouldDeleteCurrentItem: Bool = false
+    
+    private var currentMediaTypeSelected: MediaType = .All
     
     lazy var searchTextBox:SearchTextField = {
         let stb: SearchTextField = SearchTextField.init(forAutoLayout: ())
@@ -20,10 +30,11 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
     }()
 
     lazy var itemsCollectionView: ItemsCollectionView = {
-        let cv: ItemsCollectionView = ItemsCollectionView.init(frame: self.view.bounds)
-        cv.translatesAutoresizingMaskIntoConstraints = false
+        let collectionView: ItemsCollectionView = ItemsCollectionView.init(frame: self.view.bounds)
         
-        return cv
+        collectionView.showItemDelegate = self
+        
+        return collectionView
     }()
 
     public required init?(coder aDecoder: NSCoder) {
@@ -38,7 +49,7 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
         
         self.title = NSLocalizedString("SearchTitle", comment: "")
         
-        self.rightButton = UIBarButtonItem(image: UIImage(named: "bt-mediaType"), style: .plain, target: self, action: #selector(rightButtonTapped))
+        self.rightButton = UIBarButtonItem(image: UIImage(named: "bt-filter"), style: .plain, target: self, action: #selector(rightButtonTapped))
         navigationItem.rightBarButtonItem = self.rightButton
         
         self.view.addSubview(self.searchTextBox)
@@ -63,7 +74,8 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.backItem?.title = "Back"
+
         self.refilter(searchPhrase: "")
     }
     
@@ -72,27 +84,42 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
         itemsCollectionView.collectionViewLayout.invalidateLayout()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if self.shouldDeleteCurrentItem {
+            self.itemsCollectionView.deleteCurrentItem()
+            self.shouldDeleteCurrentItem = false;
+        }
+    }
+    
     @objc func rightButtonTapped() -> Void {
-        let alertController = UIAlertController(title: NSLocalizedString("SelectMediaType", comment: ""), message: NSLocalizedString("SelectMediaType", comment: ""), preferredStyle: .actionSheet)
         
-        var action: UIAlertAction = UIAlertAction(title: NSLocalizedString("SelectMediaType", comment: ""), style: .default, handler: { (action:UIAlertAction) in
+        let alertController = UIAlertController(title: NSLocalizedString("MessageTitle", comment: ""), message: NSLocalizedString("SelectMediaType", comment: ""), preferredStyle: .actionSheet)
+        
+        var action: UIAlertAction = UIAlertAction(title: NSLocalizedString("MediaType_All", comment: ""), style: .default, handler: { (action:UIAlertAction) in
+            self.currentMediaTypeSelected = .All
         })
-        action.setValue(UIColor.blue, forKey: "titleTextColor")
+        action.setValue(self.currentMediaTypeSelected == .All ? UIColor.blue : UIColor.black, forKey: "titleTextColor")
         alertController.addAction(action)
         
-        action = UIAlertAction(title: "Take photo", style: .default, handler: { (action:UIAlertAction) in
-
+        action = UIAlertAction(title: NSLocalizedString("MediaType_Movie", comment: ""), style: .default, handler: { (action:UIAlertAction) in
+            self.currentMediaTypeSelected = .Movie
         })
-        action.setValue(UIColor.blue, forKey: "titleTextColor")
+        action.setValue(self.currentMediaTypeSelected == .Movie ? UIColor.blue : UIColor.black, forKey: "titleTextColor")
         alertController.addAction(action)
 
-        action = UIAlertAction(title: "Choose from Library", style: .default, handler: { (action:UIAlertAction) in
+        action = UIAlertAction(title: NSLocalizedString("MediaType_Music", comment: ""), style: .default, handler: { (action:UIAlertAction) in
+            self.currentMediaTypeSelected = .Music
         })
-        action.setValue(UIColor.blue, forKey: "titleTextColor")
+        action.setValue(self.currentMediaTypeSelected == .Music ? UIColor.blue : UIColor.black, forKey: "titleTextColor")
+        alertController.addAction(action)
+
+        action = UIAlertAction(title: NSLocalizedString("MediaType_Podcast", comment: ""), style: .default, handler: { (action:UIAlertAction) in
+            self.currentMediaTypeSelected = .Podcast
+        })
+        action.setValue(self.currentMediaTypeSelected == .Podcast ? UIColor.blue : UIColor.black, forKey: "titleTextColor")
         alertController.addAction(action)
 
         action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        action.setValue(UIColor.black, forKey: "titleTextColor")
         alertController.addAction(action)
 
         self.present(alertController, animated: true, completion: nil)
@@ -101,7 +128,7 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
     public func refilter(searchPhrase: String) -> () {
         let api: APIClient = APIClient(baseURL: URL.init(string: "https://itunes.apple.com")!)
         
-        api.getItems(path: "search?country=US&media=music&term=madonna&limit=100", parameters: nil) { (code: NSInteger, result: Any?, message: String) in
+        api.getItems(path: "search?country=US&media=all&term=hanks&limit=100", parameters: nil) { (code: NSInteger, result: Any?, message: String) in
             
             DispatchQueue.main.async() {
                 self.itemsArray.removeAll()
@@ -121,6 +148,14 @@ class SearchViewController: UIViewController, SearchDelegateProtocol {
             
             print(result)
         }
+    }
+    
+    @objc func showItem(_ item: ITunesItem) {
+        self.navigationController?.pushViewController(ItemDetailsViewController(withItem: item, fromSearchViewController: self), animated: true)
+    }
+    
+    public func deleteCurrentItem() {
+        self.shouldDeleteCurrentItem = true
     }
 }
 

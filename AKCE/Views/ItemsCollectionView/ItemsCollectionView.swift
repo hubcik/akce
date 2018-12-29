@@ -8,9 +8,15 @@
 
 import UIKit
 
+@objc protocol ShowItemDelegateProtocol: class {
+    @objc optional func showItem(_ item: ITunesItem)
+}
+
 class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    var itemsArray: [ITunesItem]?
+    public var itemsArray: [ITunesItem]? //TODO: Setter
+    public weak var showItemDelegate: ShowItemDelegateProtocol?
+    private var currentIndexPath: IndexPath! = IndexPath(item: -1, section: -1)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,7 +33,8 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
         flowLayout.sectionInset = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
 
         super.init(frame: frame, collectionViewLayout: flowLayout)
-
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
         self.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: ItemCollectionViewCell.reuseIdentifier())
 
         self.dataSource = self
@@ -60,6 +67,16 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.currentIndexPath = indexPath
+        let selectedItem = self.itemsArray![indexPath.row]
+
+        if !selectedItem.isVisited {
+            selectedItem.markVisited()
+            self.reloadData()
+        }
+        
+        self.showItemDelegate?.showItem?(selectedItem)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -70,6 +87,15 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
         else {
             //Landscape
             return CGSize(width: (UIScreen.main.bounds.size.width - 2) / 2, height: 100)
+        }
+    }
+    
+    public func deleteCurrentItem() {
+        if self.currentIndexPath.section >= 0 {
+            self.itemsArray?.remove(at: self.currentIndexPath.row)
+            self.deleteItems(at: [self.currentIndexPath!])
+            
+            currentIndexPath.section = -1
         }
     }
 }

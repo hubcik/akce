@@ -18,6 +18,14 @@
 		3C6F3DB221D64277007AEA34 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F3DB121D64277007AEA34 /* ItemCollectionViewCell.swift */; };
 		3C6F3DB421D6632A007AEA34 /* ImageViewFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F3DB321D6632A007AEA34 /* ImageViewFromURL.swift */; };
 		3C6F3DB721D66437007AEA34 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F3DB621D66437007AEA34 /* UIImageView+Download.swift */; };
+		B438B43321D75FE400F40B82 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B43221D75FE400F40B82 /* ItemDetailsViewController.swift */; };
+		B438B44621D7824500F40B82 /* EntityDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44521D7824500F40B82 /* EntityDescriptions.swift */; };
+		B438B44821D782A100F40B82 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44721D782A100F40B82 /* CoreDataManager.swift */; };
+		B438B44F21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44B21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift */; };
+		B438B45021D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44C21D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift */; };
+		B438B45121D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44D21D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift */; };
+		B438B45221D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44E21D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift */; };
+		B438B45621D8396800F40B82 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B45521D8396800F40B82 /* PersistentStorage.swift */; };
 		B4733C3221D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */; };
 		B4733C3321D54D480084FBF9 /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */; };
 		B4733C3421D54D480084FBF9 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */; };
@@ -105,6 +113,14 @@
 		3C6F3DB121D64277007AEA34 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3C6F3DB321D6632A007AEA34 /* ImageViewFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewFromURL.swift; sourceTree = "<group>"; };
 		3C6F3DB621D66437007AEA34 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
+		B438B43221D75FE400F40B82 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		B438B44521D7824500F40B82 /* EntityDescriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDescriptions.swift; sourceTree = "<group>"; };
+		B438B44721D782A100F40B82 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B438B44B21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsDeleted+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B438B44C21D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsDeleted+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B438B44D21D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsVisited+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B438B44E21D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsVisited+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B438B45521D8396800F40B82 /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
 		B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
@@ -252,6 +268,8 @@
 		3C21BCC621D52C3400FC6223 /* AKCE */ = {
 			isa = PBXGroup;
 			children = (
+				B438B43421D780DC00F40B82 /* CoreData */,
+				B438B43121D75F9200F40B82 /* ViewControllers */,
 				3C51CCE421D6782D001B3B8C /* DataObjects */,
 				3C6F3DB521D6641D007AEA34 /* Extensions */,
 				3C6F3DAB21D62947007AEA34 /* Networking */,
@@ -261,11 +279,9 @@
 				B4733C6E21D550DF0084FBF9 /* Views */,
 				B4733BD721D54D480084FBF9 /* Libs */,
 				3C21BCC721D52C3400FC6223 /* AppDelegate.swift */,
-				3C21BCC921D52C3400FC6223 /* SearchViewController.swift */,
 				3C21BCD121D52C3600FC6223 /* Assets.xcassets */,
 				3C21BCD321D52C3600FC6223 /* LaunchScreen.storyboard */,
 				3C21BCD621D52C3600FC6223 /* Info.plist */,
-				3C21BCCE21D52C3400FC6223 /* AKCE.xcdatamodeld */,
 				B4733C7421D551B10084FBF9 /* AKCE-Bridging-Header.h */,
 			);
 			path = AKCE;
@@ -302,6 +318,30 @@
 				3C6F3DB621D66437007AEA34 /* UIImageView+Download.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B438B43121D75F9200F40B82 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C21BCC921D52C3400FC6223 /* SearchViewController.swift */,
+				B438B43221D75FE400F40B82 /* ItemDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B438B43421D780DC00F40B82 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B438B44B21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift */,
+				B438B44C21D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift */,
+				B438B44D21D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift */,
+				B438B44E21D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift */,
+				3C21BCCE21D52C3400FC6223 /* AKCE.xcdatamodeld */,
+				B438B44521D7824500F40B82 /* EntityDescriptions.swift */,
+				B438B44721D782A100F40B82 /* CoreDataManager.swift */,
+				B438B45521D8396800F40B82 /* PersistentStorage.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		B4733BD721D54D480084FBF9 /* Libs */ = {
@@ -630,6 +670,7 @@
 				B4733C5A21D54D480084FBF9 /* NSArray+PureLayout.m in Sources */,
 				3C21BCCA21D52C3400FC6223 /* SearchViewController.swift in Sources */,
 				B4733C3621D54D480084FBF9 /* NVActivityIndicatorView.swift in Sources */,
+				B438B44F21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift in Sources */,
 				B4733C3A21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				B4733C5121D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				B4733C5F21D54D480084FBF9 /* UIImageView+AFNetworking.m in Sources */,
@@ -657,6 +698,7 @@
 				B4733C4D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				B4733C5421D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				B4733C4921D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				B438B45021D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift in Sources */,
 				B4733C3F21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				B4733C5C21D54D480084FBF9 /* UIProgressView+AFNetworking.m in Sources */,
 				B4733CA121D553930084FBF9 /* UILabel+Chameleon.m in Sources */,
@@ -675,6 +717,7 @@
 				B4733C7721D5533E0084FBF9 /* Colors.swift in Sources */,
 				3C6F3DB221D64277007AEA34 /* ItemCollectionViewCell.swift in Sources */,
 				B4733C6321D54D480084FBF9 /* AFAutoPurgingImageCache.m in Sources */,
+				B438B44821D782A100F40B82 /* CoreDataManager.swift in Sources */,
 				B4733C5021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				B4733C5921D54D480084FBF9 /* ALView+PureLayout.m in Sources */,
 				B4733CA021D553930084FBF9 /* UINavigationController+Chameleon.m in Sources */,
@@ -682,17 +725,22 @@
 				B4733CA321D553930084FBF9 /* UIAppearance+Swift.m in Sources */,
 				B4733C6921D54D480084FBF9 /* AFNetworkReachabilityManager.m in Sources */,
 				B4733C9C21D553930084FBF9 /* UIButton+Chameleon.m in Sources */,
+				B438B45621D8396800F40B82 /* PersistentStorage.swift in Sources */,
 				B4733C9A21D553930084FBF9 /* ChameleonConstants.m in Sources */,
 				B4733C3321D54D480084FBF9 /* NVActivityIndicatorPresenter.swift in Sources */,
+				B438B43321D75FE400F40B82 /* ItemDetailsViewController.swift in Sources */,
 				B4733C6021D54D480084FBF9 /* UIButton+AFNetworking.m in Sources */,
 				B4733C4821D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				B4733C4121D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				B438B45121D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift in Sources */,
 				B4733CA221D553930084FBF9 /* UIViewController+Chameleon.m in Sources */,
 				B4733C6821D54D480084FBF9 /* AFURLRequestSerialization.m in Sources */,
 				B4733C4F21D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				B4733C6A21D54D480084FBF9 /* AFSecurityPolicy.m in Sources */,
 				3C6F3DAD21D62962007AEA34 /* APIClient.swift in Sources */,
+				B438B44621D7824500F40B82 /* EntityDescriptions.swift in Sources */,
 				B4733C3C21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				B438B45221D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift in Sources */,
 				3C6F3DB021D6419A007AEA34 /* ItemsCollectionView.swift in Sources */,
 				B4733C4421D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B4733C4A21D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,

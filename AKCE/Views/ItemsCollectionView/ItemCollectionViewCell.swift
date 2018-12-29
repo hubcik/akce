@@ -95,12 +95,20 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }
 
     public func setItem(_ item: ITunesItem) {
+        
         self.imageView.loadImageAsync(with: item.imageURL)
+        
         self.nameLabel.text = item.name
+        
+        if item.isVisited {
+            self.backgroundViewWithColor.backgroundColor = COLOR_ITEM_BACK_VISTED
+        }
+        else {
+            self.backgroundViewWithColor.backgroundColor = COLOR_ITEM_BACK
+        }
     }
 
-    class func reuseIdentifier() -> String
-    {
+    class func reuseIdentifier() -> String {
         return String(describing: self);
     }
 }
