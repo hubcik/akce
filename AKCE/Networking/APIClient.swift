@@ -28,7 +28,7 @@ class APIClient: AFHTTPSessionManager {
     }
     
     public func useSerialiserForHTTPMethod(method: APIHTTPMethod) {
-        if (method == .APIHTTPMethodMultipartPost) {
+        if method == .APIHTTPMethodMultipartPost {
             let serializer: AFHTTPRequestSerializer = AFHTTPRequestSerializer()
             self.requestSerializer = serializer
         } else {
@@ -47,7 +47,7 @@ class APIClient: AFHTTPSessionManager {
             
         }, failure: { (task: URLSessionDataTask?, error: Error) in
             let response: HTTPURLResponse? = task?.response as? HTTPURLResponse
-            if (response != nil) {
+            if response != nil {
                 onFinish(response!.statusCode, nil, error.localizedDescription)
             }
             else {

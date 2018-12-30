@@ -29,7 +29,7 @@ class CoreDataManager: NSObject {
         
         let coordinator: NSPersistentStoreCoordinator? = self.persistentStoreCoordinator
         
-        if (coordinator != nil){
+        if coordinator != nil {
             self.managedObjectContext = NSManagedObjectContext.init(concurrencyType: NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
             self.managedObjectContext?.persistentStoreCoordinator = coordinator
         }
@@ -61,7 +61,7 @@ class CoreDataManager: NSObject {
         
         let managedObjectContext: NSManagedObjectContext! = self.managedObjectContext
         
-        if (managedObjectContext.hasChanges) {
+        if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()
             }

@@ -66,7 +66,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         
         super.updateConstraints()
 
-        if (constraintsSet) {
+        if constraintsSet {
             return
         }
         

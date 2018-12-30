@@ -16,7 +16,7 @@ class dr: NSObject {
     {
         var resizeFactor:CGFloat = -1
         
-        if (resizeFactor < 0)
+        if resizeFactor < 0
         {
             resizeFactor = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height) / cDesignScreenWidth
         }

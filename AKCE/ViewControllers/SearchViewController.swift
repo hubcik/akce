@@ -180,9 +180,9 @@ class SearchViewController: SuperViewController, SearchDelegateProtocol, UIColle
                 self.currentTask = nil
                 
                 DispatchQueue.main.async() {
-                    if (code >= 0) {
+                    if code >= 0 {
                         self.itemsArray.removeAll()
-                        if (result != nil) {
+                        if result != nil {
                             let resultAsDict = result as! [String : Any]
                             
                             for case let itemDict as [String : Any] in (resultAsDict["results"] as! [Any]) {
