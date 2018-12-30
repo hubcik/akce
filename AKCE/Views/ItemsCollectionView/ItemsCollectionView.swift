@@ -8,13 +8,13 @@
 
 import UIKit
 
-@objc protocol ShowItemDelegateProtocol: class {
-    @objc optional func showItem(_ item: ITunesItem)
+protocol ShowItemDelegateProtocol: class {
+    func showItem(_ item: ITunesItem)
 }
 
 class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    public var itemsArray: [ITunesItem]? //TODO: Setter
+    public var itemsArray: [ITunesItem]! = []
     public weak var showItemDelegate: ShowItemDelegateProtocol?
     private var currentIndexPath: IndexPath! = IndexPath(item: -1, section: -1)
     
@@ -50,12 +50,7 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (self.itemsArray != nil) {
-            return (self.itemsArray?.count)!
-        }
-        else {
-            return 0
-        }
+        return self.itemsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -76,12 +71,13 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
             self.reloadData()
         }
         
-        self.showItemDelegate?.showItem?(selectedItem)
+        self.showItemDelegate?.showItem(selectedItem)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //TODO: Flat should not change the size
-        if UIDevice.current.orientation.isPortrait || UIDevice.current.orientation.isFlat {
+        if Device.IS_IPHONE && UIScreen.main.bounds.size.width < UIScreen.main.bounds.size.height {
+            //Portrait
             return CGSize(width: UIScreen.main.bounds.size.width, height: 100)
         }
         else {
@@ -92,6 +88,9 @@ class ItemsCollectionView: UICollectionView, UICollectionViewDataSource, UIColle
     
     public func deleteCurrentItem() {
         if self.currentIndexPath.section >= 0 {
+            
+            itemsArray[self.currentIndexPath.row].markDeleted()
+            
             self.itemsArray?.remove(at: self.currentIndexPath.row)
             self.deleteItems(at: [self.currentIndexPath!])
             

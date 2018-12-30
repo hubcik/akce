@@ -14,7 +14,9 @@ class ITunesItem: NSObject {
     var name: String? = ""
     var imageURL: String? = ""
     var viewURL: String? = ""
-    
+    var longDescription: String? = ""
+    var descriptionHTML: String? = ""
+
     var isVisited: Bool! = false
 
     override public init() {
@@ -52,12 +54,26 @@ class ITunesItem: NSObject {
         if self.viewURL != nil {
             self.isVisited = PersistentStorage.shared().isURLVisited(self.viewURL!)
         }
+        
+        if itemDictionary["longDescription"] != nil {
+            self.longDescription = itemDictionary["longDescription"] as? String
+        }
+
+        if itemDictionary["description"] != nil {
+            self.descriptionHTML = itemDictionary["longDescription"] as? String
+        }
     }
     
     public func markVisited() {
         if self.viewURL != nil && !self.isVisited {
             self.isVisited = true
             PersistentStorage.shared().markURLVisited(self.viewURL!)
+        }
+    }
+
+    public func markDeleted() {
+        if self.viewURL != nil {
+            PersistentStorage.shared().markURLDeleted(self.viewURL!)
         }
     }
 }

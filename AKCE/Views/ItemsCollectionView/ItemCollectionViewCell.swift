@@ -13,10 +13,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     var constraintsSet: Bool = false
     
     public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder);
+        super.init(coder: aDecoder)
     }
 
     lazy var backgroundViewWithColor:UIView = {
+        
         let b:UIView = UIView(forAutoLayout:())
         b.translatesAutoresizingMaskIntoConstraints = false
         b.backgroundColor = COLOR_ITEM_BACK
@@ -26,9 +27,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }()
 
     public var imageView: UIImageView = {
+        
         let iv: UIImageView = UIImageView(frame: CGRect.zero)
         
-        iv.backgroundColor = UIColor.clear
+        iv.backgroundColor = UIColor.yellow
         iv.contentMode = UIView.ContentMode.scaleAspectFill
         iv.clipsToBounds = true
         
@@ -36,17 +38,9 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }()
 
     lazy var nameLabel: UILabel = {
-        var l: UILabel = UILabel(forAutoLayout:())
-        l.backgroundColor = UIColor.clear
-        l.textColor = COLOR_ITEM_NAME
-        l.font = UIFont.systemFont(ofSize: 14)
-        l.numberOfLines = 5
-        l.textAlignment = NSTextAlignment.left
-        l.adjustsFontSizeToFitWidth = true;
-        l.minimumScaleFactor = 0.3
-
-        l.text = ""
-
+        
+        var l: UILabel = UIFactory.createNameLabel()
+        
         return l
     }()
 
@@ -81,9 +75,16 @@ class ItemCollectionViewCell: UICollectionViewCell {
         self.backgroundViewWithColor.autoPinEdge(.top, to: .top, of: self.contentView, withOffset: dr.r(v: 1))
         self.backgroundViewWithColor.autoPinEdge(.bottom, to: .bottom, of: self.contentView, withOffset: dr.r(v: -1))
 
-        self.imageView.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: dr.r(v: 15))
-        self.imageView.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: dr.r(v: 15))
-        self.imageView.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: dr.r(v: -15))
+        if Device.IS_IPHONE {
+            self.imageView.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: dr.r(v: 15))
+            self.imageView.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: dr.r(v: 15))
+            self.imageView.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: dr.r(v: -15))
+        }
+        else {
+            self.imageView.autoPinEdge(.left, to: .left, of: self.backgroundViewWithColor, withOffset: 5)
+            self.imageView.autoPinEdge(.top, to: .top, of: self.backgroundViewWithColor, withOffset: 5)
+            self.imageView.autoPinEdge(.bottom, to: .bottom, of: self.backgroundViewWithColor, withOffset: -5)
+        }
         self.imageView.autoMatch(.width, to: .height, of: self.imageView)
 
         self.nameLabel.autoPinEdge(.left, to: .right, of: self.imageView, withOffset: dr.r(v: 10))
@@ -109,6 +110,6 @@ class ItemCollectionViewCell: UICollectionViewCell {
     }
 
     class func reuseIdentifier() -> String {
-        return String(describing: self);
+        return String(describing: self)
     }
 }

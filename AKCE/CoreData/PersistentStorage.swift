@@ -12,7 +12,7 @@ import CoreData
 class PersistentStorage: NSObject {
 
     private static var sharedPersistentStorage: PersistentStorage = {
-        let persistentStorage = PersistentStorage();
+        let persistentStorage = PersistentStorage()
         
         return persistentStorage
     }()
@@ -26,13 +26,13 @@ class PersistentStorage: NSObject {
     
     public override init() {
         
-        super.init();
+        super.init()
         
         let fetchRequest_ItemsVisited = NSFetchRequest<NSFetchRequestResult>()
-        fetchRequest_ItemsVisited.entity = entityDescription_ItemsVisited
+        fetchRequest_ItemsVisited.entity = entityDescription_ItemVisited
         do {
             let result = try CoreDataManager.shared().managedObjectContext.fetch(fetchRequest_ItemsVisited)
-            for case let mo as ItemsVisited in result {
+            for case let mo as ItemVisited in result {
                 visitedItems.append(mo.viewURL!)
             }
         } catch {
@@ -41,10 +41,10 @@ class PersistentStorage: NSObject {
         }
 
         let fetchRequest_ItemsDeleted = NSFetchRequest<NSFetchRequestResult>()
-        fetchRequest_ItemsDeleted.entity = entityDescription_ItemsVisited
+        fetchRequest_ItemsDeleted.entity = entityDescription_ItemDeleted
         do {
             let result = try CoreDataManager.shared().managedObjectContext.fetch(fetchRequest_ItemsDeleted)
-            for case let mo as ItemsVisited in result {
+            for case let mo as ItemDeleted in result {
                 deletedItems.append(mo.viewURL!)
             }
         } catch {
@@ -69,7 +69,7 @@ class PersistentStorage: NSObject {
         
         self.visitedItems.append(url)
         
-        let mo: ItemsVisited = ItemsVisited(entity: entityDescription_ItemsVisited!, insertInto: CoreDataManager.shared().managedObjectContext)
+        let mo: ItemVisited = ItemVisited(entity: entityDescription_ItemVisited!, insertInto: CoreDataManager.shared().managedObjectContext)
         
         mo.viewURL = url
         
@@ -84,11 +84,13 @@ class PersistentStorage: NSObject {
         
         self.deletedItems.append(url)
         
-        let mo: ItemsDeleted = ItemsDeleted(entity: entityDescription_ItemsDeleted!, insertInto: CoreDataManager.shared().managedObjectContext)
+        let mo: ItemDeleted = ItemDeleted(entity: entityDescription_ItemDeleted!, insertInto: CoreDataManager.shared().managedObjectContext)
         
         mo.viewURL = url
         
         self.saveChanges()
+        
+        //TODO: Deleted items COULD be remved from Visited.
     }
     
     private func saveChanges() {

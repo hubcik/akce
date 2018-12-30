@@ -21,3 +21,6 @@
 "MediaType_Music" = "Music";
 "MediaType_Podcast" = "Podcast";
 
+"ERRMSG_CannotRetrieve" = "Cannot retreive data. Please check your network connection and try again";
+"MSG_NoResults" = "No results to display.";
+

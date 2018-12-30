@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchDelegateProtocol: class {
-    func refilter(searchPhrase: String)
+    func refilter()
 }
 
 let CSEARCH_BAR_HEIGHT: CGFloat = dr.r(v: 40)
@@ -19,6 +19,7 @@ class SearchTextField: UIView, UITextFieldDelegate {
     weak var searchDelegate: SearchDelegateProtocol?
     
     lazy var textField: UITextField = {
+        
         let tf: UITextField = UITextField(forAutoLayout:())
         
         tf.placeholder = NSLocalizedString("Search", comment: "")
@@ -26,7 +27,7 @@ class SearchTextField: UIView, UITextFieldDelegate {
         tf.clearButtonMode = UITextField.ViewMode.whileEditing
         
         tf.backgroundColor = UIColor.clear
-        tf.returnKeyType = UIReturnKeyType.done
+        tf.returnKeyType = UIReturnKeyType.search
         
         tf.font = UIFont.systemFont(ofSize: dr.r(v: 14))
         
@@ -37,6 +38,7 @@ class SearchTextField: UIView, UITextFieldDelegate {
     }()
     
     lazy var cancelButton:UIButton = {
+        
         let b:UIButton = UIButton(type: .custom)
         b.backgroundColor = UIColor.clear
         b.addTarget(self, action: #selector(cancelButtonClicked), for: UIControl.Event.touchUpInside)
@@ -66,6 +68,7 @@ class SearchTextField: UIView, UITextFieldDelegate {
     }
     
     private func updateColors() {
+        
         self.backgroundColor = COLOR_SEARCH_BACK
         
         let attributes = [
@@ -80,6 +83,7 @@ class SearchTextField: UIView, UITextFieldDelegate {
     }
     
     override func updateConstraints() {
+        
         super.updateConstraints()
         
         self.textField.autoPinEdge(.left, to: .left, of: self, withOffset: dr.r(v: 5))
@@ -94,9 +98,6 @@ class SearchTextField: UIView, UITextFieldDelegate {
     }
     
     @objc func textDidChange() {
-        if self.searchDelegate != nil {
-            self.searchDelegate?.refilter(searchPhrase: self.textField.text!)
-        }
     }
     
     @objc func cancelButtonClicked() {
@@ -105,19 +106,18 @@ class SearchTextField: UIView, UITextFieldDelegate {
         UIView.animate(withDuration: 0.3) {
             self.cancelButton.alpha = 0
         }
-        self.searchDelegate?.refilter(searchPhrase: self.textField.text!)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         textField.endEditing(true)
         
-        if (textField.text == "")
-        {
-            UIView.animate(withDuration: 0.3) {
-                self.cancelButton.alpha = 0
-            }
+        UIView.animate(withDuration: 0.3) {
+            self.cancelButton.alpha = 0
         }
         
+        self.searchDelegate?.refilter()
+
         return true
     }
     

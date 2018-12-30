@@ -21,11 +21,8 @@
 		B438B43321D75FE400F40B82 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B43221D75FE400F40B82 /* ItemDetailsViewController.swift */; };
 		B438B44621D7824500F40B82 /* EntityDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44521D7824500F40B82 /* EntityDescriptions.swift */; };
 		B438B44821D782A100F40B82 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44721D782A100F40B82 /* CoreDataManager.swift */; };
-		B438B44F21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44B21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift */; };
-		B438B45021D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44C21D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift */; };
-		B438B45121D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44D21D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift */; };
-		B438B45221D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B44E21D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift */; };
 		B438B45621D8396800F40B82 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B45521D8396800F40B82 /* PersistentStorage.swift */; };
+		B438B45821D843B400F40B82 /* String+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438B45721D843B400F40B82 /* String+Encoding.swift */; };
 		B4733C3221D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */; };
 		B4733C3321D54D480084FBF9 /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */; };
 		B4733C3421D54D480084FBF9 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */; };
@@ -83,7 +80,7 @@
 		B4733C6A21D54D480084FBF9 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C3021D54D480084FBF9 /* AFSecurityPolicy.m */; };
 		B4733C7021D5510E0084FBF9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C6F21D5510E0084FBF9 /* SearchView.swift */; };
 		B4733C7321D551820084FBF9 /* DeviceResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7221D551820084FBF9 /* DeviceResizer.swift */; };
-		B4733C7721D5533E0084FBF9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7621D5533E0084FBF9 /* Colors.swift */; };
+		B4733C7721D5533E0084FBF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7621D5533E0084FBF9 /* Constants.swift */; };
 		B4733C9921D553930084FBF9 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7D21D553930084FBF9 /* UIColor+ChameleonPrivate.m */; };
 		B4733C9A21D553930084FBF9 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C7E21D553930084FBF9 /* ChameleonConstants.m */; };
 		B4733C9B21D553930084FBF9 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C8221D553930084FBF9 /* UIColor+Chameleon.m */; };
@@ -97,6 +94,12 @@
 		B4733CA321D553930084FBF9 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C9221D553930084FBF9 /* UIAppearance+Swift.m */; };
 		B4733CA421D553930084FBF9 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4733C9321D553930084FBF9 /* UIImage+ChameleonPrivate.m */; };
 		B4733CA921D554980084FBF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4733CA821D554980084FBF9 /* Localizable.strings */; };
+		B47461DB21D9136B00EEE9F5 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47461DA21D9136B00EEE9F5 /* SuperViewController.swift */; };
+		B490F7DC21D91C270094AA1E /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490F7DB21D91C270094AA1E /* UIFactory.swift */; };
+		B490F7E121D93F5F0094AA1E /* ItemDeleted+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490F7DD21D93F5F0094AA1E /* ItemDeleted+CoreDataClass.swift */; };
+		B490F7E221D93F5F0094AA1E /* ItemDeleted+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490F7DE21D93F5F0094AA1E /* ItemDeleted+CoreDataProperties.swift */; };
+		B490F7E321D93F5F0094AA1E /* ItemVisited+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490F7DF21D93F5F0094AA1E /* ItemVisited+CoreDataClass.swift */; };
+		B490F7E421D93F5F0094AA1E /* ItemVisited+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490F7E021D93F5F0094AA1E /* ItemVisited+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,11 +119,8 @@
 		B438B43221D75FE400F40B82 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		B438B44521D7824500F40B82 /* EntityDescriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDescriptions.swift; sourceTree = "<group>"; };
 		B438B44721D782A100F40B82 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		B438B44B21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsDeleted+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B438B44C21D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsDeleted+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		B438B44D21D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsVisited+CoreDataClass.swift"; sourceTree = "<group>"; };
-		B438B44E21D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemsVisited+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B438B45521D8396800F40B82 /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		B438B45721D843B400F40B82 /* String+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Encoding.swift"; sourceTree = "<group>"; };
 		B4733BD921D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
 		B4733BDB21D54D480084FBF9 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		B4733BDC21D54D480084FBF9 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		B4733C6F21D5510E0084FBF9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B4733C7221D551820084FBF9 /* DeviceResizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceResizer.swift; sourceTree = "<group>"; };
 		B4733C7421D551B10084FBF9 /* AKCE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AKCE-Bridging-Header.h"; sourceTree = "<group>"; };
-		B4733C7621D5533E0084FBF9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B4733C7621D5533E0084FBF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4733C7C21D553930084FBF9 /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
 		B4733C7D21D553930084FBF9 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
 		B4733C7E21D553930084FBF9 /* ChameleonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonConstants.m; sourceTree = "<group>"; };
@@ -236,6 +236,12 @@
 		B4733C9721D553930084FBF9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B4733C9821D553930084FBF9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B4733CA821D554980084FBF9 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B47461DA21D9136B00EEE9F5 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
+		B490F7DB21D91C270094AA1E /* UIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
+		B490F7DD21D93F5F0094AA1E /* ItemDeleted+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDeleted+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B490F7DE21D93F5F0094AA1E /* ItemDeleted+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDeleted+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B490F7DF21D93F5F0094AA1E /* ItemVisited+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemVisited+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B490F7E021D93F5F0094AA1E /* ItemVisited+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemVisited+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				3C6F3DB621D66437007AEA34 /* UIImageView+Download.swift */,
+				B438B45721D843B400F40B82 /* String+Encoding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +332,7 @@
 			children = (
 				3C21BCC921D52C3400FC6223 /* SearchViewController.swift */,
 				B438B43221D75FE400F40B82 /* ItemDetailsViewController.swift */,
+				B47461DA21D9136B00EEE9F5 /* SuperViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,10 +340,10 @@
 		B438B43421D780DC00F40B82 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				B438B44B21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift */,
-				B438B44C21D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift */,
-				B438B44D21D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift */,
-				B438B44E21D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift */,
+				B490F7DD21D93F5F0094AA1E /* ItemDeleted+CoreDataClass.swift */,
+				B490F7DE21D93F5F0094AA1E /* ItemDeleted+CoreDataProperties.swift */,
+				B490F7DF21D93F5F0094AA1E /* ItemVisited+CoreDataClass.swift */,
+				B490F7E021D93F5F0094AA1E /* ItemVisited+CoreDataProperties.swift */,
 				3C21BCCE21D52C3400FC6223 /* AKCE.xcdatamodeld */,
 				B438B44521D7824500F40B82 /* EntityDescriptions.swift */,
 				B438B44721D782A100F40B82 /* CoreDataManager.swift */,
@@ -519,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				B4733C7221D551820084FBF9 /* DeviceResizer.swift */,
+				B490F7DB21D91C270094AA1E /* UIFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -526,7 +535,7 @@
 		B4733C7521D553240084FBF9 /* Const */ = {
 			isa = PBXGroup;
 			children = (
-				B4733C7621D5533E0084FBF9 /* Colors.swift */,
+				B4733C7621D5533E0084FBF9 /* Constants.swift */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -670,12 +679,12 @@
 				B4733C5A21D54D480084FBF9 /* NSArray+PureLayout.m in Sources */,
 				3C21BCCA21D52C3400FC6223 /* SearchViewController.swift in Sources */,
 				B4733C3621D54D480084FBF9 /* NVActivityIndicatorView.swift in Sources */,
-				B438B44F21D80C5F00F40B82 /* ItemsDeleted+CoreDataClass.swift in Sources */,
 				B4733C3A21D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				B4733C5121D54D480084FBF9 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				B4733C5F21D54D480084FBF9 /* UIImageView+AFNetworking.m in Sources */,
 				3C21BCC821D52C3400FC6223 /* AppDelegate.swift in Sources */,
 				B4733C3D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				B490F7DC21D91C270094AA1E /* UIFactory.swift in Sources */,
 				3C6F3DB421D6632A007AEA34 /* ImageViewFromURL.swift in Sources */,
 				B4733C4C21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				B4733C4021D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
@@ -685,6 +694,7 @@
 				B4733C5821D54D480084FBF9 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				B4733C4221D54D480084FBF9 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B4733C4321D54D480084FBF9 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				B490F7E321D93F5F0094AA1E /* ItemVisited+CoreDataClass.swift in Sources */,
 				B4733C3221D54D480084FBF9 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				B4733C5221D54D480084FBF9 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				3C6F3DB721D66437007AEA34 /* UIImageView+Download.swift in Sources */,
@@ -698,11 +708,11 @@
 				B4733C4D21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				B4733C5421D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				B4733C4921D54D480084FBF9 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
-				B438B45021D80C5F00F40B82 /* ItemsDeleted+CoreDataProperties.swift in Sources */,
 				B4733C3F21D54D480084FBF9 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				B4733C5C21D54D480084FBF9 /* UIProgressView+AFNetworking.m in Sources */,
 				B4733CA121D553930084FBF9 /* UILabel+Chameleon.m in Sources */,
 				B4733C9921D553930084FBF9 /* UIColor+ChameleonPrivate.m in Sources */,
+				B438B45821D843B400F40B82 /* String+Encoding.swift in Sources */,
 				B4733C3721D54D480084FBF9 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				B4733C3E21D54D480084FBF9 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				B4733C5521D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
@@ -714,13 +724,15 @@
 				3C21BCD021D52C3400FC6223 /* AKCE.xcdatamodeld in Sources */,
 				B4733C4B21D54D480084FBF9 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				B4733C5D21D54D480084FBF9 /* UIRefreshControl+AFNetworking.m in Sources */,
-				B4733C7721D5533E0084FBF9 /* Colors.swift in Sources */,
+				B4733C7721D5533E0084FBF9 /* Constants.swift in Sources */,
 				3C6F3DB221D64277007AEA34 /* ItemCollectionViewCell.swift in Sources */,
 				B4733C6321D54D480084FBF9 /* AFAutoPurgingImageCache.m in Sources */,
 				B438B44821D782A100F40B82 /* CoreDataManager.swift in Sources */,
+				B490F7E221D93F5F0094AA1E /* ItemDeleted+CoreDataProperties.swift in Sources */,
 				B4733C5021D54D480084FBF9 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				B4733C5921D54D480084FBF9 /* ALView+PureLayout.m in Sources */,
 				B4733CA021D553930084FBF9 /* UINavigationController+Chameleon.m in Sources */,
+				B490F7E421D93F5F0094AA1E /* ItemVisited+CoreDataProperties.swift in Sources */,
 				3C51CCE621D6784C001B3B8C /* ITunesItem.swift in Sources */,
 				B4733CA321D553930084FBF9 /* UIAppearance+Swift.m in Sources */,
 				B4733C6921D54D480084FBF9 /* AFNetworkReachabilityManager.m in Sources */,
@@ -731,8 +743,8 @@
 				B438B43321D75FE400F40B82 /* ItemDetailsViewController.swift in Sources */,
 				B4733C6021D54D480084FBF9 /* UIButton+AFNetworking.m in Sources */,
 				B4733C4821D54D480084FBF9 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				B47461DB21D9136B00EEE9F5 /* SuperViewController.swift in Sources */,
 				B4733C4121D54D480084FBF9 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
-				B438B45121D80C5F00F40B82 /* ItemsVisited+CoreDataClass.swift in Sources */,
 				B4733CA221D553930084FBF9 /* UIViewController+Chameleon.m in Sources */,
 				B4733C6821D54D480084FBF9 /* AFURLRequestSerialization.m in Sources */,
 				B4733C4F21D54D480084FBF9 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
@@ -740,7 +752,6 @@
 				3C6F3DAD21D62962007AEA34 /* APIClient.swift in Sources */,
 				B438B44621D7824500F40B82 /* EntityDescriptions.swift in Sources */,
 				B4733C3C21D54D480084FBF9 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
-				B438B45221D80C5F00F40B82 /* ItemsVisited+CoreDataProperties.swift in Sources */,
 				3C6F3DB021D6419A007AEA34 /* ItemsCollectionView.swift in Sources */,
 				B4733C4421D54D480084FBF9 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B4733C4A21D54D480084FBF9 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
@@ -748,6 +759,7 @@
 				B4733C3421D54D480084FBF9 /* NVActivityIndicatorViewable.swift in Sources */,
 				B4733C3521D54D480084FBF9 /* NVActivityIndicatorShape.swift in Sources */,
 				B4733CA421D553930084FBF9 /* UIImage+ChameleonPrivate.m in Sources */,
+				B490F7E121D93F5F0094AA1E /* ItemDeleted+CoreDataClass.swift in Sources */,
 				B4733C6121D54D480084FBF9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

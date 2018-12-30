@@ -19,19 +19,15 @@ enum APIHTTPMethod {
 
 class APIClient: AFHTTPSessionManager {
 
-    var authToken: String = ""
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
-    public init(baseURL: URL)
-    {
+    
+    public init(baseURL: URL) {
         super.init(baseURL: baseURL, sessionConfiguration: nil)
     }
-
-    public func useSerialiserForHTTPMethod(method: APIHTTPMethod)
-    {
+    
+    public func useSerialiserForHTTPMethod(method: APIHTTPMethod) {
         if (method == .APIHTTPMethodMultipartPost) {
             let serializer: AFHTTPRequestSerializer = AFHTTPRequestSerializer()
             self.requestSerializer = serializer
@@ -41,24 +37,22 @@ class APIClient: AFHTTPSessionManager {
         }
     }
     
-    func getItems(path: String, parameters: Any?, onFinish: @escaping (NSInteger, Any?, String)-> Void) {
+    func getItems(path: String, parameters: Any?, onFinish: @escaping (NSInteger, Any?, String)-> Void) -> URLSessionDataTask {
         self.useSerialiserForHTTPMethod(method: .APIHTTPMethodGet)
         self.requestSerializer.setValue("application/json", forHTTPHeaderField:"Content-Type")
         
-        self.get(path, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask!, responseObject: Any?) in
-            let response: HTTPURLResponse = task.response as! HTTPURLResponse;
+        return self.get(path, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask!, responseObject: Any?) in
+            let response: HTTPURLResponse = task.response as! HTTPURLResponse
             onFinish(response.statusCode, responseObject, "")
             
         }, failure: { (task: URLSessionDataTask?, error: Error) in
-            let response: HTTPURLResponse? = task?.response as? HTTPURLResponse;
+            let response: HTTPURLResponse? = task?.response as? HTTPURLResponse
             if (response != nil) {
                 onFinish(response!.statusCode, nil, error.localizedDescription)
             }
             else {
                 onFinish(-1, nil, error.localizedDescription)
             }
-        })
+        })!
     }
-
-
 }

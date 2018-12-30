@@ -12,7 +12,7 @@ import CoreData
 class CoreDataManager: NSObject {
     
     private static var sharedCoreDataManager: CoreDataManager = {
-        let coreDataManager = CoreDataManager();
+        let coreDataManager = CoreDataManager()
         
         return coreDataManager
     }()
@@ -21,60 +21,61 @@ class CoreDataManager: NSObject {
         return sharedCoreDataManager
     }
     
-    var managedObjectContext: NSManagedObjectContext!;
+    var managedObjectContext: NSManagedObjectContext!
     
     public override init() {
         
-        super.init();
+        super.init()
         
-        let coordinator: NSPersistentStoreCoordinator? = self.persistentStoreCoordinator;
+        let coordinator: NSPersistentStoreCoordinator? = self.persistentStoreCoordinator
         
         if (coordinator != nil){
-            self.managedObjectContext = NSManagedObjectContext.init(concurrencyType: NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType);
-            self.managedObjectContext?.persistentStoreCoordinator = coordinator;
+            self.managedObjectContext = NSManagedObjectContext.init(concurrencyType: NSManagedObjectContextConcurrencyType.privateQueueConcurrencyType)
+            self.managedObjectContext?.persistentStoreCoordinator = coordinator
         }
     }
     
     lazy var managedObjectModel: NSManagedObjectModel = {
-        let modelURL:URL? = Bundle.main.url(forResource: "AKCE", withExtension: "momd");
+        let modelURL:URL? = Bundle.main.url(forResource: "AKCE", withExtension: "momd")
         
-        return NSManagedObjectModel(contentsOf: modelURL!)!;
-    }();
+        return NSManagedObjectModel(contentsOf: modelURL!)!
+    }()
     
     lazy var persistentStoreCoordinator:NSPersistentStoreCoordinator = {
-        let storeUrl:URL! = applicationDocumentsDirectory().appendingPathComponent("AKCE.sqlite");
+        let storeUrl:URL! = applicationDocumentsDirectory().appendingPathComponent("AKCE.sqlite")
         
-        let psc:NSPersistentStoreCoordinator! = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel);
+        let psc:NSPersistentStoreCoordinator! = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
         do {
             try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: [NSMigratePersistentStoresAutomaticallyOption : true, NSInferMappingModelAutomaticallyOption : true])
         }
         catch {
-            abort();
+            abort()
         }
         
-        return psc;
+        return psc
         
-    }();
+    }()
     
     func saveContext() -> Void {
-        let managedObjectContext: NSManagedObjectContext! = self.managedObjectContext;
+        
+        let managedObjectContext: NSManagedObjectContext! = self.managedObjectContext
         
         if (managedObjectContext.hasChanges) {
             do {
                 try managedObjectContext.save()
             }
             catch{
-                abort();
+                abort()
             }
         }
     }
     
     func applicationDocumentsDirectory() -> URL {
-        let fileManager = FileManager.default;
+        let fileManager = FileManager.default
         let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory: URL = (urls.first)!;
+        let documentDirectory: URL = (urls.first)!
         
-        return documentDirectory;
+        return documentDirectory
     }
 }
